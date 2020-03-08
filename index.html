@@ -5,16 +5,41 @@
 		<title>Tictactoestarter</title>
 		<style>
 			html,body {
+				height:100%;
 				margin: 0;
 				padding: 0;
 			}
 			*, *::before, *::after {
 				box-sizing: border-box;
 			}
+			.board{
+				height:100%;
+				color:red;
+				display:grid;
+				grid-template-columns: 1fr 1fr 1fr;
+				grid-template-rows: 1fr 1fr 1fr;
+				grid-gap: 10px;
+				background:#000000;
+			}
+			button{background: #ffffff;border: 0;}
+
 		</style>
 	</head>
 	<body>
-		Hello world!
+		<div class="board" id="board">
+			<button>x</button>
+			<button>X</button>
+			<button>o</button>
+			<button>O</button>
+			<button>X</button>
+			<button>O</button>
+			<button></button>
+			<button></button>
+			<button></button>
+
+		</div>
+
+
 		<script src="./code.js" type="module" ></script>
 	</body>
 </html>
