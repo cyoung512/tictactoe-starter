@@ -1,3 +1,19 @@
-import './other-code.js';
+// import './other-code.js';
+const boardId='board';
+const makeButton= (index)=> {
+     const button = document.createElement("BUTTON");
+    //add properties to button
+    button.setAttribute('data-index',index);
+    button.addEventListener("click", ()=>alert(index));
+    const board = document.getElementById(boardId);
+     board.append(button);
+} ;
 
-console.log('Hello Corbin here!');
+
+const makeBoard = ()=> {
+    for (let index = 0; index < 9; index++) {
+        makeButton(index);
+    }
+
+};
+makeBoard();
