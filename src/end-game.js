@@ -41,22 +41,23 @@ const getColumnsFromBoard = (board) =>{
     return columns
 
 
-}
+};
 //get diagonal from top left to bottom right
-const getDiagonal1FromBoard = (board) =>{
+const getDiagonal1FromBoard = (board) => {
     const rowlength = Math.sqrt(board.length);
     const diagonal1 = [];
-    for (let x=0;x<rowlength;x++){
+    for (let x = 0; x < rowlength; x++) {
         diagonal1.push([]);
     }
 
-    for (let x=0;x<board.length;x++){
-        const currentValue = board[x]
-        const currentDiagonalIndex = x*(rowlenght+1);
+    for (let x = 0; x < board.length; x++) {
+        const currentValue = board[x];
+        const currentDiagonalIndex = x * (rowlenght + 1);
         const currentDiagonal = diagonal1[currentDiagonalIndex];
-        currentDiagonal.push(currentValue)
-
-
+        currentDiagonal.push(currentValue);
+        }
+    return diagonal1
+};
 
 //Row checker
 const rowChecker = (row) =>{
