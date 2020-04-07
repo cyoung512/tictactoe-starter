@@ -55,7 +55,7 @@ const getDiagonal1FromBoard = (board) =>{
         const currentDiagonalIndex = x*(rowlenght+1);
         const currentDiagonal = diagonal1[currentDiagonalIndex];
         currentDiagonal.push(currentValue)
-
+}
 
 
 //Row checker
