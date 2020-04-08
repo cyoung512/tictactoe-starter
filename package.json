@@ -1,0 +1,30 @@
+{
+  "name": "tictactoe-starter",
+  "version": "1.0.0",
+  "description": "starting place for tic tac toe",
+  "scripts": {
+    "lint": "eslint .",
+    "lint-fix": "eslint . --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cyoung512/tictactoe-starter.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cyoung512/tictactoe-starter/issues"
+  },
+  "homepage": "https://github.com/cyoung512/tictactoe-starter#readme",
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "husky": "^4.2.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm lint-fix"
+    }
+  }
+}
