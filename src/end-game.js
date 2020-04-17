@@ -5,7 +5,7 @@ const VALUES ={
     o: "o",
     incomplete: ""
     noWinner: "no winner"
-}
+};
 
 //get rows from board, actually returns columns
 const getRowsFromBoard = (board) =>{
@@ -19,10 +19,9 @@ const getRowsFromBoard = (board) =>{
         const currentRowIndex = Math.floor(x/rowlenght);
         const currentRow = rows[currentRowIndex];
         currentRow.push(currentValue)
-
     }
     return rows
-}
+};
 
 //get columns
 const getColumnsFromBoard = (board) =>{
@@ -39,24 +38,31 @@ const getColumnsFromBoard = (board) =>{
 
     }
     return columns
-
-
 };
+
 //get diagonal from top left to bottom right
 const getDiagonal1FromBoard = (board) => {
     const rowlength = Math.sqrt(board.length);
     const diagonal1 = [];
-    for (let x = 0; x < rowlength; x++) {
-        diagonal1.push([]);
-    }
 
-    for (let x = 0; x < board.length; x++) {
-        const currentValue = board[x];
+    for (let x = 0; x < rowlength; x++) {
         const currentDiagonalIndex = x * (rowlenght + 1);
-        const currentDiagonal = diagonal1[currentDiagonalIndex];
-        currentDiagonal.push(currentValue);
+        const currentValue = board[currentDiagonalIndex];
+        diagonal1.push(currentValue)
         }
     return diagonal1
+};
+//get diagonal from top right to bottom left
+const getDiagonal1FromBoard = (board) => {
+    const rowlength = Math.sqrt(board.length);
+    const diagonal1 = [];
+
+    for (let x = 0; x < rowlength + 1; x++) {
+        const currentDiagonalIndex = (x + 1) * (rowlenght - 1);
+        const currentValue = board[currentDiagonalIndex];
+        diagonal2.push(currentValue)
+    }
+    return diagonal2
 };
 
 //Row checker
@@ -82,7 +88,7 @@ const determineWinner = (board) =>{
     //Empty space available
     if (board.includes("")) {
         return "incomplete";
-    }
+    };
 
 
 
